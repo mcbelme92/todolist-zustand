@@ -32,13 +32,13 @@ No se usa Context API ni Redux → **código directo y limpio**.
 ## 🗂️ **Estructura**
 ```
 /src
-├── App.js
-├── store.js
+├── App.jsx
+├── store.jsx
 ├── components/
-│ ├── TaskInput.js
-│ ├── TaskList.js
-│ ├── TaskItem.js
-│ ├── Stats.js
+│ ├── TaskInput.jsx
+│ ├── TaskList.jsx
+│ ├── TaskItem.jsx
+│ ├── Stats.jsx
 
 ```
 ---
