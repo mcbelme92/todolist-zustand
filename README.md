@@ -23,7 +23,7 @@ No se usa Context API ni Redux → **código directo y limpio**.
 ## ⚙️ **Tecnologías**
 
 - React (Vite o Create React App) v19.1.0
-- Zustand
+- Zustand v5.0.6
 - Hooks (`useState`, `useMemo`, `useCallback`, `useRef`)
 - Estilos básicos (puedes extender con Tailwind o Material UI)
 
