@@ -1,12 +1,73 @@
-# React + Vite
+# 🕷️ Infernal ToDo List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un proyecto **minimalista** pero **bien estructurado**, hecho para practicar y demostrar:
+- 🧩 Manejo de estado global con **Zustand** (alternativa simple a Redux).
+- ⚡ Hooks avanzados: `useMemo`, `useCallback`, `useRef`.
+- ✅ Buenas prácticas: optimización de renders y patrón de componentes.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 **¿Qué es esto?**
 
-## Expanding the ESLint configuration
+Una **ToDo List** que permite:
+- Agregar tareas.
+- Marcar tareas como completadas.
+- Mostrar estadísticas de tareas completadas/pending.
+- Mantener el input enfocado automáticamente (usando `useRef`).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Todo se hace con un **store global** definido en Zustand.  
+No se usa Context API ni Redux → **código directo y limpio**.
+
+---
+
+## ⚙️ **Tecnologías**
+
+- React (Vite o Create React App)
+- Zustand
+- Hooks (`useState`, `useMemo`, `useCallback`, `useRef`)
+- Estilos básicos (puedes extender con Tailwind o Material UI)
+
+---
+
+## 🗂️ **Estructura**
+
+/src
+├── App.js
+├── store.js
+├── components/
+│ ├── TaskInput.js
+│ ├── TaskList.js
+│ ├── TaskItem.js
+│ ├── Stats.js
+
+
+---
+
+## 🔑 **Conceptos clave**
+
+| Hook | Cómo se usa |
+|------|--------------|
+| `useRef` | Referencia el `<input>` para autofoco y guardar valores sin rerender. |
+| `useCallback` | Memoriza handlers para evitar renders innecesarios en hijos (teórico). |
+| `useMemo` | Memoriza cálculos (stats de tareas completadas/pending). |
+| Zustand | Define el store global (`tasks`, `addTask`, `toggleTask`). |
+
+---
+
+## 📌 **¿Por qué existe?**
+
+Este proyecto no es solo una lista de tareas:
+- Sirve como **plantilla base** para apps que necesitan **estado global sin Redux**.
+- Demuestra que entiendes **flujo de datos, optimización y hooks avanzados**.
+- Es fácil de escalar → puedes agregar filtros, persistencia o API real.
+
+---
+
+## 🧙‍♂️ **Cómo correrlo**
+
+```bash
+# 1. Instala dependencias
+npm install
+
+# 2. Corre en dev
+npm run dev
