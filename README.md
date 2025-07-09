@@ -30,7 +30,7 @@ No se usa Context API ni Redux → **código directo y limpio**.
 ---
 
 ## 🗂️ **Estructura**
-
+```
 /src
 ├── App.js
 ├── store.js
@@ -40,7 +40,7 @@ No se usa Context API ni Redux → **código directo y limpio**.
 │ ├── TaskItem.js
 │ ├── Stats.js
 
-
+```
 ---
 
 ## 🔑 **Conceptos clave**
