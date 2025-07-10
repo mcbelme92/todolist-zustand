@@ -1,6 +1,6 @@
-import Stats from "./Stats";
-import TaskInput from "./TaskInput";
-import TaskList from "./TaskList";
+import Stats from "../components/Stats";
+import TaskInput from "../components/TaskInput";
+import TaskList from "../components/TaskList";
 
 const TaskView = () => {
   return (

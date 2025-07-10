@@ -1,5 +1,5 @@
 import './App.css'
-import TaskView from './components/TaskView'
+import TaskView from './views/TaskView'
 
 function App() {
 
