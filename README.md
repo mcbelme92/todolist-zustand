@@ -118,3 +118,36 @@ Este enfoque asegura que el código sea **modular, reutilizable, fácil de escal
 Si quieres llevar estos principios al siguiente nivel, puedes usar TypeScript, testing o dividir en módulos/features aún más pequeños.
 
 ---
+
+---
+
+## 🚦 Manifiesto de calidad: Simplicidad, Mantenibilidad y Escalabilidad
+
+Antes de implementar cualquier funcionalidad, me hago estas preguntas para asegurar la calidad y el futuro del proyecto:
+
+1. **¿Es simple?**
+    - ¿Lo entiende cualquiera al leer el código?
+    - ¿Evita pasos innecesarios o complejidad oculta?
+
+2. **¿Es mantenible?**
+    - ¿Será fácil de modificar, corregir o mejorar en el futuro?
+    - ¿Está la lógica separada y clara?
+
+3. **¿Es escalable?**
+    - ¿Podría crecer el proyecto, duplicar funcionalidades, o agregar nuevas sin romper todo?
+    - ¿Soporta la extensión sin volverse incontrolable?
+
+> **Compromiso:**  
+> Siempre argumento mis decisiones de arquitectura y estructura en función de estos tres principios. Cada sección del proyecto puede revisarse en esta sección para justificar si cumple o no cumple cada uno.
+
+---
+
+## 📊 Ejemplo aplicado a este proyecto
+
+| Principio      | ¿Se cumple? | Justificación breve                                     |
+|----------------|-------------|--------------------------------------------------------|
+| Simplicidad    | ✅ Sí        | El código es directo, cada componente tiene un rol claro. |
+| Mantenibilidad | ✅ Sí        | Está dividido en componentes, hooks y stores modulares.  |
+| Escalabilidad  | ✅ Sí        | Se pueden agregar nuevas features o stores fácilmente.   |
+
+---
