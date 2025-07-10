@@ -13,7 +13,11 @@ export default function TaskItem({ task }) {
     <ul>
       <li
         onClick={handleToggle}
-        style={{ textDecoration: task.completed ? "line-through" : "none" }}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") handleToggle();
+        }}
+        type="button"
+        style={{ textDecoration: task.completed ? "line-through" : "none", cursor: "pointer" }}
       >
         {task.text}
       </li>
