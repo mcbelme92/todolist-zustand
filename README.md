@@ -86,6 +86,8 @@ npm run dev
 
 ---
 
+```
+
 ## 🦾 Principios SOLID en Infernal ToDo List
 
 Aunque SOLID fue pensado para programación orientada a objetos, **también puede aplicarse al desarrollo con React y hooks**. Así los abordamos en este proyecto:
