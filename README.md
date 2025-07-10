@@ -178,5 +178,86 @@ Mantener ese código no aportaba valor ni se usaba en los tests, por lo que se o
 Cobertura de pruebas:
 Gracias a estos cambios, la cobertura del componente aumentó a más del 80%.
 
+## JEST: Instalacion y dependencias
+
 En resumen:
 Todas las decisiones de simplificación y refactor en TaskItem se tomaron basadas en los resultados de los tests y en el análisis de cómo realmente se utiliza el componente en la aplicación.
+
+Resumen de dependencias y configuración para testing en React
+1. Jest
+Paquete: jest
+
+¿Para qué?
+Es el framework de testing que ejecuta tus tests, muestra resultados, coverage y errores.
+
+2. Babel y presets
+Paquetes:
+
+@babel/core
+
+@babel/preset-env
+
+@babel/preset-react
+
+¿Para qué?
+Babel transforma tu código moderno (JSX, ES6+) a JavaScript que Jest puede entender.
+
+preset-env: para sintaxis moderna de JS.
+
+preset-react: para transformar JSX a JS normal.
+
+"runtime": "automatic" (en el preset react): para no tener que importar React manualmente en cada archivo.
+
+3. jest-environment-jsdom
+Paquete: jest-environment-jsdom
+
+¿Para qué?
+Permite a Jest simular un navegador, con objetos como window y document para poder probar componentes React en un entorno similar al real.
+
+4. React Testing Library
+Paquete: @testing-library/react
+
+¿Para qué?
+Facilita la prueba de componentes React simulando cómo los usaría un usuario real (busca por texto, etiquetas, etc.).
+
+5. @testing-library/jest-dom
+Paquete: @testing-library/jest-dom
+
+¿Para qué?
+Agrega matchers extra a Jest para hacer asserts más intuitivos en el DOM (por ejemplo, .toBeInTheDocument(), .toHaveStyle()).
+
+6. Archivos de configuración
+.babelrc:
+Define cómo Babel debe transformar tu código.
+Ejemplo:
+
+json
+Copiar
+Editar
+{
+  "presets": [
+    ["@babel/preset-react", { "runtime": "automatic" }],
+    "@babel/preset-env"
+  ]
+}
+jest.config.js o package.json "jest":
+Configura Jest para usar el entorno jsdom:
+
+js
+Copiar
+Editar
+module.exports = {
+  testEnvironment: 'jsdom'
+}
+O en package.json:
+
+json
+Copiar
+Editar
+"jest": {
+  "testEnvironment": "jsdom"
+}
+¿Por qué se instala todo esto?
+Para que Jest pueda entender tu código React y ejecutar los tests igual que en un navegador real.
+
+Para poder escribir tests en JSX, con sintaxis moderna, y tener coverage y asserts completos.
