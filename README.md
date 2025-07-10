@@ -47,16 +47,22 @@ No se usa Context API ni Redux → **código directo y limpio**.
 │ ├── useFocus.js
 
 ```
+**¿Para qué sirve cada carpeta?**
+- `components/`: UI “chiquita”, widgets reutilizables.
+- `views/`: Vistas/páginas completas, usan componentes y hooks.
+- `stores/`: Aquí viven los stores Zustand.
+- `hooks/`: Hooks personalizados para lógica reutilizable.
 ---
 
 ## 🔑 **Conceptos clave**
 
-| Hook | Cómo se usa |
-|------|--------------|
-| `useRef` | Referencia el `<input>` para autofoco y guardar valores sin rerender. |
-| `useCallback` | Memoriza handlers para evitar renders innecesarios en hijos (teórico). |
-| `useMemo` | Memoriza cálculos (stats de tareas completadas/pending). |
-| Zustand | Define el store global (`tasks`, `addTask`, `toggleTask`). |
+| Hook/Zustand | ¿Para qué lo usas? |
+|--------------|--------------------|
+| `useRef`     | Autofoco en `<input>`, guardar valores sin rerender. |
+| `useCallback`| Memorizar handlers, evitar renders extra. |
+| `useMemo`    | Memorizar cálculos, ejemplo: stats de tareas. |
+| `Zustand`    | Store global: tareas, acciones (add, toggle, remove). |
+| `Custom Hooks` | Lógica y reutilización, ejemplo: estadísticas. |
 
 ---
 
