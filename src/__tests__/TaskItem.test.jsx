@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import TaskItem from "./TaskItem";
+import TaskItem from "../components/TaskItem";
 
 describe("TaskItem", () => {
   const task = { text: "Aprender Jest", completed: false };
