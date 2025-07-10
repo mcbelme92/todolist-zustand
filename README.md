@@ -83,3 +83,36 @@ npm install
 
 # 2. Corre en dev
 npm run dev
+
+---
+
+## 🦾 Principios SOLID en Infernal ToDo List
+
+Aunque SOLID fue pensado para programación orientada a objetos, **también puede aplicarse al desarrollo con React y hooks**. Así los abordamos en este proyecto:
+
+- **S — Single Responsibility Principle (Responsabilidad única):**  
+  Cada componente tiene una única función:  
+  `TaskInput` maneja el input, `TaskList` muestra la lista, `Stats` calcula y muestra estadísticas, `TaskView` solo compone vistas.
+
+- **O — Open/Closed Principle (Abierto/cerrado):**  
+  La app es **fácil de extender** (agregar más componentes, hooks o lógica), sin modificar el código base.  
+  Por ejemplo, podrías añadir filtros o persistencia sin romper nada existente.
+
+- **L — Liskov Substitution Principle:**  
+  Puedes reemplazar componentes por otros que cumplan la misma función/salida, y el sistema sigue funcionando igual.  
+  Ejemplo: podrías intercambiar `TaskList` por otra lista con diferente UI sin afectar el resto.
+
+- **I — Interface Segregation Principle:**  
+  Los componentes solo dependen de lo que usan.  
+  No hay props innecesarios ni lógica de más; cada componente recibe solo lo necesario o consume el store directo.
+
+- **D — Dependency Inversion Principle:**  
+  Los componentes dependen de abstracciones (hooks y el store de Zustand), no de implementaciones directas.  
+  Si cambias el store global por otro sistema, los componentes principales apenas necesitan cambios.
+
+---
+
+Este enfoque asegura que el código sea **modular, reutilizable, fácil de escalar y mantener**.  
+Si quieres llevar estos principios al siguiente nivel, puedes usar TypeScript, testing o dividir en módulos/features aún más pequeños.
+
+---
