@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master, cicd-actions-demo ]
+  pull_request:
+    branches: [ main, master, cicd-actions-demo ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instala dependencias
+        run: npm install
+
+      - name: Corre tests y coverage
+        run: npm run test -- --coverage
