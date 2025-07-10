@@ -39,6 +39,7 @@ No se usa Context API ni Redux → **código directo y limpio**.
 │ ├── TaskList.jsx
 │ ├── TaskItem.jsx
 │ ├── Stats.jsx
+│ ├── TaskView.jsx
 
 ```
 ---
