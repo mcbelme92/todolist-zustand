@@ -3,7 +3,7 @@
 Un proyecto **minimalista** pero **bien estructurado**, hecho para practicar y demostrar:
 - 🧩 Manejo de estado global con **Zustand** (alternativa simple a Redux).
 - ⚡ Hooks avanzados: `useMemo`, `useCallback`, `useRef`.
-- ✅ Buenas prácticas: optimización de renders y patrón de componentes.
+- ✅ Buenas prácticas: optimización de renders, patrón de componentes y principios **SOLID** adaptados a React.
 
 ---
 
