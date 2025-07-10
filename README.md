@@ -4,7 +4,7 @@ Un proyecto **minimalista** pero **bien estructurado**, hecho para practicar y d
 - 🧩 Manejo de estado global con **Zustand** (alternativa simple a Redux).
 - ⚡ Hooks avanzados: `useMemo`, `useCallback`, `useRef`.
 - ✅ Buenas prácticas: optimización de renders, patrón de componentes y principios **SOLID** adaptados a React.
-- 🧪 Testing automatizado con Jest y React Testing Library. Las pruebas principales para el componente TaskItem se encuentran en /src/components/TaskItem.test.jsx.
+- 🧪 Testing automatizado con Jest y React Testing Library. Las pruebas principales para el componente TaskItem se encuentran en /src/__tests__/TaskItem.test.jsx.
  
 
 ---
