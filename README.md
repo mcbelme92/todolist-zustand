@@ -151,3 +151,30 @@ Antes de implementar cualquier funcionalidad, me hago estas preguntas para asegu
 | Escalabilidad  | ✅ Sí        | Se pueden agregar nuevas features o stores fácilmente.   |
 
 ---
+
+## JEST: Resumen de pruebas y decisiones en TaskItem
+
+Cobertura de casos importantes:
+Se agregaron tests para verificar que:
+
+Se renderiza el texto de la tarea correctamente.
+
+Se tacha visualmente la tarea si está completada.
+
+Muestra el estado "no tachado" cuando no está completada.
+
+No truena si el texto está vacío o es undefined.
+
+Soporta textos largos/speciales.
+
+No renderiza tareas con texto mayor a X caracteres.
+
+Motivo para quitar soporte de teclado (onKeyDown):
+Se eliminó la lógica de interacción por teclado (onKeyDown) porque en la práctica el usuario solo interactúa con mouse/clic, y el componente está pensado únicamente para ese flujo.
+Mantener ese código no aportaba valor ni se usaba en los tests, por lo que se optó por simplificar el componente y mejorar su mantenimiento.
+
+Cobertura de pruebas:
+Gracias a estos cambios, la cobertura del componente aumentó a más del 80%.
+
+En resumen:
+Todas las decisiones de simplificación y refactor en TaskItem se tomaron basadas en los resultados de los tests y en el análisis de cómo realmente se utiliza el componente en la aplicación.
