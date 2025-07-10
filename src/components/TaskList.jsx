@@ -1,4 +1,4 @@
-import { useTaskStore } from '../store';
+import { useTaskStore } from '../stores/store';
 import TaskItem from './TaskItem';
 
 export default function TaskList() {

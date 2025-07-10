@@ -1,8 +1,9 @@
-import { useRef } from 'react';
-import { useTaskStore } from '../store';
+
+import { useFocus } from '../hooks/useFocus';
+import { useTaskStore } from '../stores/store';
 
 export default function TaskInput() {
-  const inputRef = useRef(null);
+  const inputRef = useFocus();
   const addTask = useTaskStore((state) => state.addTask);
   const handleAdd = () => {
     const text = inputRef.current.value;
