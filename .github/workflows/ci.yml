@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ main, master, cicd-actions-demo ]
+    branches: [ main, master, dev ]
   pull_request:
-    branches: [ main, master, cicd-actions-demo ]
+    branches: [ main, master, dev ]
 
 jobs:
   build-and-test:
@@ -12,9 +12,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
       - name: Instala dependencias
         run: npm install
-
-      - name: Corre tests y coverage
-        run: npm run test -- --coverage
+      - name: Lint
+        run: npm run lint
+      - name: Test unitarios
+        run: npm test -- --coverage
+      - name: Build de producción
+        run: npm run build
+      - name: Audit seguridad
+        run: npm audit --audit-level=high
