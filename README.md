@@ -33,6 +33,7 @@ No se usa Context API ni Redux → **código directo y limpio**.
 ```
 /src
 ├── App.jsx
+├── stores/
 ├── store.jsx
 ├── components/
 │ ├── TaskInput.jsx
@@ -41,6 +42,9 @@ No se usa Context API ni Redux → **código directo y limpio**.
 │ ├── Stats.jsx
 ├── views/
 │ ├── TaskView.jsx
+├── hooks
+  ├── useTaskStats.js
+  ├── useFocus.js
 
 ```
 ---

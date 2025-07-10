@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { useTaskStore } from "../store";
+import { useTaskStore } from "../stores/store";
 
 export default function TaskItem({ task }) {
   const toggleTask = useTaskStore((state) => state.toggleTask);
