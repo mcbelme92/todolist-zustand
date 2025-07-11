@@ -3,6 +3,42 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import TaskItem from "../components/TaskItem";
 import TaskInput from "../components/TaskInput";
 
+/**
+ * @file TaskItem.test.jsx
+ * @description
+ *   Tests unitarios para los componentes TaskItem y TaskInput de la aplicación Todo List.
+ *   Estas pruebas aseguran que los componentes funcionen correctamente bajo distintos escenarios,
+ *   validando tanto el renderizado como la lógica de interacción básica.
+ *
+ * @author pepe mcbelme
+ * @date 2025-07
+ *
+ * @summary
+ *   - Cada test cubre un caso de uso importante del componente (render, props, edge cases).
+ *   - Se usa Jest + React Testing Library para simular el DOM y eventos de usuario.
+ *   - Algunos tests cubren también integración básica (ej: agregar una tarea).
+ *   - La cobertura y robustez de estos tests ayudan a mantener la calidad del proyecto.
+ *
+ * @unitTests
+ *   ✔️ Renderiza el texto de la tarea
+ *   ✔️ Tacha la tarea si está completada
+ *   ✔️ Desmarca la tarea si está incompleta
+ *   ✔️ Renderiza aunque el texto esté vacío
+ *   ✔️ Muestra correctamente textos largos o especiales
+ *   ✔️ No renderiza texto si `task.text` es undefined
+ *   ✔️ No renderiza la tarea si el texto es mayor a 181 caracteres
+ *   ✔️ (Básico de integración) Permite agregar una tarea desde TaskInput
+ *
+ * @why
+ *   - Garantizar que los componentes no fallen ante entradas inesperadas.
+ *   - Detectar errores rápido y facilitar refactorizaciones.
+ *   - Dar confianza para crecer y mantener el proyecto con calidad.
+ *
+ * @see
+ *   - https://jestjs.io/docs/getting-started
+ *   - https://testing-library.com/docs/react-testing-library/intro/
+ */
+
 describe("TaskItem", () => {
   const task = { text: "Aprender Jest", completed: false };
 
