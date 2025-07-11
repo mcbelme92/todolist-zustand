@@ -30,6 +30,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^30.0.4",
     "jest-environment-jsdom": "^30.0.4",
     "vite": "^7.0.3"
@@ -39,11 +40,16 @@
       "^.+\\.[jt]sx?$": "babel-jest"
     },
     "testEnvironment": "jsdom",
-     "collectCoverageFrom": [
-    "src/**/*.{js,jsx}",
-    "!src/**/__tests__/**",
-    "!src/**/*.test.{js,jsx}"
-  ]
-    
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/**/__tests__/**",
+      "!src/**/*.test.{js,jsx}"
+    ],
+    "moduleNameMapper": {
+  "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+  },
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.js"
+    ]
   }
 }
