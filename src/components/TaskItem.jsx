@@ -15,13 +15,21 @@ export default function TaskItem({ task }) {
 
   return (
     <ul>
-      <li
-        onClick={handleToggle}
-        type="button"
-        style={{ textDecoration: task.completed ? "line-through" : "none", cursor: "pointer" }}
-      >
-        {displayText}
-      </li>
-    </ul>
+  <li>
+    <button
+      onClick={handleToggle}
+      style={{
+        textDecoration: task.completed ? "line-through" : "none",
+        cursor: "pointer",
+        background: "none",
+        border: "none",
+        padding: 0,
+        font: "inherit",
+      }}
+    >
+      {displayText}
+    </button>
+  </li>
+</ul>
   );
 }
